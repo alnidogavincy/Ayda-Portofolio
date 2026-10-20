@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolegahr Presence Case Study — Fildzah Zata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/sites/icons/default-favicon-light.v1.png">
+  <style>
+    .case-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .case-header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .case-hero-img {
+      width: 100%;
+      border-radius: var(--radius-card);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    .spec-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 24px;
+      background: #fbfbfb;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+    }
+    .spec-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .spec-value {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .case-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .case-h2 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .case-p {
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+    .takeaway-box {
+      background: var(--bg-tinted-pink);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-primary);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 680px) {
+      .spec-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Nav Pill -->
+  <header class="nav-container">
+    <nav class="nav-pill">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About me</a>
+      <a href="https://drive.google.com/file/d/1J5Ug7CDqKJhaK8lZ0o7vtF40czsiUF-t/view?usp=sharing" target="_blank" rel="noopener" class="nav-link">Resume</a>
+      <a href="https://medium.com/@fildzahzata" target="_blank" rel="noopener" class="nav-link">Blog</a>
+    </nav>
+  </header>
+
+  <main class="case-container">
+    <a href="index.html" class="back-btn">← Back to homepage</a>
+
+    <header class="case-header">
+      <span class="tag-category">Kolegahr</span>
+      <h1 class="hero-title" style="font-size: clamp(32px, 4vw, 48px);">Transforming Internal Operations with Kolegahr</h1>
+      <p class="hero-subtitle" style="font-size: 20px;">
+        Seamlessly Manage Attendance and Supercharge Payroll with Kolegahr HRIS, Now available on Web and Mobile
+      </p>
+      <img src="https://framerusercontent.com/images/JRtkkWWhOOXeliNxsX8xD5YvLk.png" alt="Kolegahr Presence Hero Mockup" class="case-hero-img">
+    </header>
+
+    <!-- Metadata Spec Bar -->
+    <div class="spec-bar">
+      <div>
+        <div class="spec-label">Role</div>
+        <div class="spec-value">UI/UX Designer</div>
+      </div>
+      <div>
+        <div class="spec-label">Timeline</div>
+        <div class="spec-value">2021 – 2022</div>
+      </div>
+      <div>
+        <div class="spec-label">Tools</div>
+        <div class="spec-value">Figma</div>
+      </div>
+      <div>
+        <div class="spec-label">Reading Time</div>
+        <div class="spec-value">7 min read</div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <section class="case-section">
+      <h2 class="case-h2">Overview</h2>
+      <p class="case-p">
+        The company (BSA) previously had products (Smart Presence) that focused on attendance systems that could not be scaled further. 
+        The company aimed to create a new, delightful modern app that functions completely as an HRIS, starting with two core modules: attendance and payroll.
+      </p>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="case-section">
+      <h2 class="case-h2">The Challenge</h2>
+      <p class="case-p">
+        There were several pivots during development. After 9 months of engineering for external clients, the product strategy shifted towards fulfilling internal corporate requirements.
+        The UI/UX team worked directly alongside developers and product managers to test edge-case calculations and component states.
+      </p>
+    </section>
+
+    <!-- Approach -->
+    <section class="case-section">
+      <h2 class="case-h2">Approach & Framework</h2>
+      <p class="case-p">
+        We implemented a 4-phase framework: <strong>Discovery & Research</strong> (in-depth interviews with 15 participating client companies), 
+        <strong>Define Problem</strong> (affinity diagrams and personas), <strong>Design</strong> (design system components & user flows), and <strong>Deliver</strong> (continuous usability testing and developer handoff).
+      </p>
+    </section>
+
+    <!-- Takeaways -->
+    <section class="takeaway-box">
+      <h3 class="philosophy-title">Takeaways & Retrospective</h3>
+      <p class="case-p">
+        <strong>What worked well:</strong> The introduction of a unified design system accelerated team velocity by over 40%, streamlined employee clock-in/out across mobile and web admin, and automated attendance data pipelines for the payroll engine.
+      </p>
+      <p class="case-p">
+        <strong>Continuous iteration:</strong> Optimizing body font size for older administrative users, and refining copy inconsistencies across dual-language interfaces.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer-container">
+    <div class="footer-content">
+      <p class="footer-credit">Made with <span class="heart-icon">❤️</span> in Jember</p>
+    </div>
+  </footer>
+
+</body>
+</html>

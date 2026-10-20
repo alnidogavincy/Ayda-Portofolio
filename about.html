@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Fildzah Zata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/sites/icons/default-favicon-light.v1.png">
+  <style>
+    .about-article {
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-bottom: 80px;
+    }
+    .about-h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .about-p {
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .philosophy-card {
+      background: var(--bg-tinted-pink);
+      padding: 32px;
+      border-radius: var(--radius-card);
+      border-left: 4px solid var(--accent-primary);
+    }
+    .philosophy-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 240px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Nav Pill -->
+  <header class="nav-container">
+    <nav class="nav-pill">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About me</a>
+      <a href="https://drive.google.com/file/d/1J5Ug7CDqKJhaK8lZ0o7vtF40czsiUF-t/view?usp=sharing" target="_blank" rel="noopener" class="nav-link">Resume</a>
+      <a href="https://medium.com/@fildzahzata" target="_blank" rel="noopener" class="nav-link">Blog</a>
+    </nav>
+  </header>
+
+  <main class="section-container">
+    <article class="about-article">
+      <h1 class="about-h1">About me</h1>
+      
+      <p class="about-p">
+        My name is <strong>Fildzah Zata</strong>, a curious UI/UX designer with more than two years of experience in crafting user-friendly HRIS software solutions, complemented by over a year of background in industrial product design and craftsmanship.
+      </p>
+
+      <p class="about-p">
+        My journey into the world of UX design was sparked during my time in design school when I discovered Joseph Joseph's kitchenware products. I was amazed by their way of thinking in solving problems in the kitchen through intuitive physical design. Since then, I've been passionate about improving lives through thoughtful, human-centered design.
+      </p>
+
+      <div class="philosophy-card">
+        <h3 class="philosophy-title">Learn to design, Design to learn</h3>
+        <p class="about-p">
+          <em>"Fail hard, fail often."</em> I believe that understanding design is a process that takes time to work through. Everyone has a unique path and different perspectives. Feedback is an opportunity to grow for me, both as a designer and as a person.
+        </p>
+      </div>
+
+      <div class="gallery-section">
+        <h3 class="philosophy-title">Play & Craftsmanship</h3>
+        <p class="about-p">
+          Outside of digital design, I love making embroidery stitches and capturing moments with analog Instax film. Here is a glimpse of my crafts:
+        </p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://framerusercontent.com/images/JSHlMsLcQxpLyqh0jDeTQG5ti84.png" alt="Craft embroidery 1">
+          </div>
+          <div class="gallery-item">
+            <img src="https://framerusercontent.com/images/CvhPrVjF3KmAGvpHasGqNrpepc.png" alt="Craft embroidery 2">
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer-container">
+    <div class="footer-content">
+      <p class="footer-credit">Made with <span class="heart-icon">❤️</span> in Jember</p>
+    </div>
+  </footer>
+
+</body>
+</html>

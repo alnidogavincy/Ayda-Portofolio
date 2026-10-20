@@ -1,0 +1,389 @@
+/* ==========================================================================
+   Design Tokens & Variables (fildzahzata.framer.website replication)
+   ========================================================================== */
+:root {
+  --bg-canvas: #ffffff;
+  --bg-tinted-pink: rgba(250, 241, 244, 0.55);
+  --bg-tinted-beige: #f2f0e7;
+  
+  --text-primary: #0a0a0a;
+  --text-secondary: #404040;
+  --text-muted: #757575;
+  
+  --accent-primary: #d1306a;
+  --accent-active: #ae3360;
+  --accent-tag: #7c74dd;
+  --accent-hover-blue: #0088ff;
+  
+  --border-light: #e0e0e0;
+  
+  --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --radius-card: 20px;
+  --radius-pill: 20px;
+  --radius-capsule: 9999px;
+  
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   Floating Navigation Pill
+   ========================================================================== */
+.nav-container {
+  position: sticky;
+  top: 24px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: 12px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-hover-blue);
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  color: var(--accent-active);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  width: 100%;
+  max-width: 1150px;
+  padding: 96px 24px 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Works & Projects Sections
+   ========================================================================== */
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 48px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.section-header {
+  width: 100%;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.section-title.highlight {
+  color: var(--accent-primary);
+}
+
+.section-title.dark {
+  color: var(--text-primary);
+}
+
+/* 2-Column Works Grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 40px;
+  width: 100%;
+}
+
+/* Digital Project Card */
+.project-card, .product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.card-media-wrapper {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background-color: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: var(--transition-smooth);
+}
+
+.card-media-wrapper.tall {
+  height: 420px;
+}
+
+.card-media-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-media-wrapper:hover .card-img {
+  transform: scale(1.025);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tag-category {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-tag);
+}
+
+.meta-divider {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.meta-date {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.card-title a:hover {
+  color: var(--accent-primary);
+}
+
+.product-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.00em;
+  line-height: 1.25;
+  color: var(--text-secondary);
+}
+
+.product-title a:hover {
+  color: var(--accent-primary);
+}
+
+.card-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Connect / Social Section
+   ========================================================================== */
+.connect-section {
+  padding-bottom: 96px;
+}
+
+.social-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.social-item {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 10px 24px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  transition: var(--transition-smooth);
+}
+
+.social-item:hover {
+  color: var(--accent-active);
+  border-color: var(--accent-active);
+  background-color: var(--bg-tinted-pink);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer-container {
+  width: 100%;
+  border-top: 1px solid var(--border-light);
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-credit {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.heart-icon {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 860px) {
+  .hero-section {
+    padding-top: 64px;
+  }
+  
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .card-media-wrapper, .card-media-wrapper.tall {
+    height: 300px;
+  }
+  
+  .nav-pill {
+    padding: 8px 20px;
+    gap: 16px;
+  }
+  
+  .nav-link {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 48px 16px 36px;
+  }
+  
+  .section-container {
+    padding: 36px 16px 48px;
+  }
+  
+  .card-media-wrapper, .card-media-wrapper.tall {
+    height: 240px;
+  }
+}
